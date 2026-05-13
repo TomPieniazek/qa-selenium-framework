@@ -1,10 +1,9 @@
-package com.tomp.rolonopol.pages;
+package com.tomp.rolnopol.pages;
 
-import com.tomp.rolonopol.config.TestConfig;
+import com.tomp.rolnopol.config.TestConfig;
 import io.cucumber.datatable.DataTable;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.asserts.SoftAssert;
 
 import java.util.Map;
 
@@ -13,15 +12,14 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    SoftAssert softAssert = new SoftAssert();
-    private By header = By.xpath("//span[@class='main-title']");
-    private By activeUsersNumber = By.id("stat-users");
-    private By managedFarmsNumber = By.id("stat-farms");
-    private By totalAreaNumber = By.id("stat-area");
-    private By totalStaffNumber = By.id("stat-staff");
-    private By stockAnimalsNumber = By.id("stat-animals");
-    private By registerButton = By.cssSelector("#cta-section a[href='/register.html']");
-    private By signInButton = By.cssSelector("#cta-section a[href='/login.html']");
+    private final By header = By.xpath("//span[@class='main-title']");
+    private final By activeUsersNumber = By.id("stat-users");
+    private final By managedFarmsNumber = By.id("stat-farms");
+    private final By totalAreaNumber = By.id("stat-area");
+    private final By totalStaffNumber = By.id("stat-staff");
+    private final By stockAnimalsNumber = By.id("stat-animals");
+    private final By registerButton = By.cssSelector("#cta-section a[href='/register.html']");
+    private final By signInButton = By.cssSelector("#cta-section a[href='/login.html']");
 
     public void openPage() {
         driver.get(TestConfig.get("baseUrl"));

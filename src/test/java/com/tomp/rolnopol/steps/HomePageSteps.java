@@ -1,7 +1,7 @@
-package com.tomp.rolonopol.steps;
+package com.tomp.rolnopol.steps;
 
-import com.tomp.rolonopol.driver.DriverManager;
-import com.tomp.rolonopol.pages.HomePage;
+import com.tomp.rolnopol.driver.DriverManager;
+import com.tomp.rolnopol.pages.HomePage;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,5 +26,15 @@ public class HomePageSteps {
     @Then("Home Page main header should be {string}")
     public void userChecksHomePageHeader(String expectedHeader) {
         Assert.assertEquals(homePage.getHeaderText(), expectedHeader, "The expected header is incorrect!");
+    }
+
+    @When("user clicks the register button")
+    public void userClicksTheRegisterButton() {
+        homePage.clickRegisterButton();
+    }
+
+    @When("user clicks the log in button")
+    public void userClicksTheRLogInButton() {
+        homePage.clickLogInButton();
     }
 }

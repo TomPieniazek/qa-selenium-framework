@@ -1,6 +1,7 @@
-package com.tomp.rolonopol.hooks;
+package com.tomp.rolnopol.hooks;
 
-import com.tomp.rolonopol.driver.DriverManager;
+import com.tomp.rolnopol.context.ScenarioContext;
+import com.tomp.rolnopol.driver.DriverManager;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 
@@ -12,6 +13,7 @@ public class CucumberHooks {
 
     @After
     public void tearDown() {
+        ScenarioContext.clearUserData();
         DriverManager.quitDriver();
     }
 }

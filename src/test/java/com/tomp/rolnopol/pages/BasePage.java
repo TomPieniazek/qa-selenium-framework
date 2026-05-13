@@ -1,6 +1,6 @@
-package com.tomp.rolonopol.pages;
+package com.tomp.rolnopol.pages;
 
-import com.tomp.rolonopol.utils.WaitUtils;
+import com.tomp.rolnopol.utils.WaitUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,5 +23,21 @@ public class BasePage {
 
     public String getText(By locator) {
         return waitUtils.waitForVisibility(locator).getText();
+    }
+
+    public void type(By locator, String text, boolean clearField) {
+        WebElement element = waitUtils.waitForVisibility(locator);
+        if (clearField) {
+            element.clear();
+        }
+        element.sendKeys(text);
+    }
+
+    public void type(By locator, String text) {
+        type(locator, text, true);
+    }
+
+    public void click(By locator) {
+        waitUtils.waitForVisibility(locator).click();
     }
 }

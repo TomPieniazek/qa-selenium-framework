@@ -1,13 +1,14 @@
-package com.tomp.rolonopol.runners;
+package com.tomp.rolnopol.runners;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
 import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
+        tags = "",
         glue = {
-                "com.tomp.rolonopol.steps",
-                "com.tomp.rolonopol.hooks"
+                "com.tomp.rolnopol.steps",
+                "com.tomp.rolnopol.hooks"
         },
         plugin = {
                 "pretty",
