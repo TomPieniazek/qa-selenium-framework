@@ -3,7 +3,7 @@
 <suite name="Cucumber Test Suite" verbose="1">
     <test name="Home Page Tests">
         <classes>
-            <class name="com.tomp.rolonopol.runners.HomePageTestsRunner"/>
+            <class name="com.tomp.rolnopol.runners.HomePageTestsRunner"/>
         </classes>
     </test>
 </suite>

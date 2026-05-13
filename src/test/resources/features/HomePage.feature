@@ -1,4 +1,4 @@
-Feature: Login
+Feature: Home Page
 
   Scenario: User verifies Rolnopol Home Page
     Given user opens Rolnopol Home Page

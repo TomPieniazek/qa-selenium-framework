@@ -1,6 +1,6 @@
-package com.tomp.rolonopol.utils;
+package com.tomp.rolnopol.utils;
 
-import com.tomp.rolonopol.config.TestConfig;
+import com.tomp.rolnopol.config.TestConfig;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 public class WaitUtils {
-    private WebDriver driver;
+    private final WebDriver driver;
     private final WebDriverWait wait;
 
     public WaitUtils(WebDriver driver) {
@@ -28,5 +28,9 @@ public class WaitUtils {
 
     public void waitForPageTitle(String expectedTitle) {
         wait.until(ExpectedConditions.titleIs(expectedTitle));
+    }
+
+    public void waitForDisappearance(By locator) {
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }
 }

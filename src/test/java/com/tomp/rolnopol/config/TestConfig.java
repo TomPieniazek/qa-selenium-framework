@@ -1,4 +1,4 @@
-package com.tomp.rolonopol.config;
+package com.tomp.rolnopol.config;
 
 import java.io.IOException;
 import java.io.InputStream;
