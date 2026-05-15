@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Statistics response",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "users",
+    "farms",
+    "area",
+    "staff",
+    "animals",
+    "avgStaffAge",
+    "offers",
+    "totalValue",
+    "advanced"
+  ],
+  "properties": {
+    "users": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "farms": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "area": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "staff": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "animals": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "avgStaffAge": {
+      "type": "number",
+      "minimum": 0
+    },
+    "offers": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "totalValue": {
+      "type": "number",
+      "minimum": 0
+    },
+    "advanced": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "avgAreaPerFarm",
+        "avgAnimalsPerFarm",
+        "avgStaffPerFarm",
+        "avgAnimalsPerStaff",
+        "avgOfferValue",
+        "completedTransactions",
+        "totalCompletedValue",
+        "totalActiveValue"
+      ],
+      "properties": {
+        "avgAreaPerFarm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avgAnimalsPerFarm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avgStaffPerFarm": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avgAnimalsPerStaff": {
+          "type": "number",
+          "minimum": 0
+        },
+        "avgOfferValue": {
+          "type": "number",
+          "minimum": 0
+        },
+        "completedTransactions": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "totalCompletedValue": {
+          "type": "number",
+          "minimum": 0
+        },
+        "totalActiveValue": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

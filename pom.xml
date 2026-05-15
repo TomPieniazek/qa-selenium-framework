@@ -17,6 +17,7 @@
         <cucumber.version>7.34.3</cucumber.version>
         <allure.version>2.34.0</allure.version>
         <javafaker.version>1.0.2</javafaker.version>
+        <restAssured.version>6.0.0</restAssured.version>
     </properties>
 
     <dependencies>
@@ -60,6 +61,18 @@
             <groupId>com.github.javafaker</groupId>
             <artifactId>javafaker</artifactId>
             <version>${javafaker.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${restAssured.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>${restAssured.version}</version>
         </dependency>
     </dependencies>
 
